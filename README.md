@@ -1,7 +1,7 @@
 # SOC710 High Spectral Leaf Extraction Batch Processing Tool
 
 ## Overview
-The SOC710_HS_extract_batch.py is a Python tool designed for batch processing of hyperspectral images, specifically focused on extracting target leaf regions and analyzing their spectral characteristics. This tool implements a complete workflow from image loading, vegetation index calculation, to target region extraction and result visualization, providing researchers with efficient hyperspectral data analysis capabilities for plant leaf studies.
+The SOC710_HS_extract_batch.py is a Python tool designed for batch processing of SOC 710 hyperspectral images, specifically focused on extracting target leaf regions and analyzing their spectral characteristics. This tool implements a complete workflow from image loading, target region segmentation based on vegetation index threshold, band reflectance extraction and result visualization, providing researchers with efficient hyperspectral data analysis capabilities for plant leaf studies.
 
 ## Features
 - Batch processing of hyperspectral image pairs (.hdr + .float)
@@ -91,7 +91,7 @@ The tool generates various output files based on configuration:
 # SOC710高光谱叶片提取批量处理工具
 
 ## 概述
-SOC710_HS_extract_batch.py是一个用于批量处理SOC 710高光谱图像的Python工具，专门用于提取目标叶片区域并分析其光谱特征。该工具实现了从图像加载、植被指数计算到目标区域提取和结果可视化的完整工作流程，为研究人员提供高效的植物叶片高光谱数据分析能力。
+SOC710_HS_extract_batch.py是一个用于批量处理SOC 710高光谱图像的Python工具，专门用于提取目标叶片区域并分析其光谱特征。该工具实现了从图像加载、基于植被指数阈值的目标区域分割、波段反射率提取和结果可视化的完整工作流程，为研究人员提供高效的植物叶片高光谱数据分析能力。
 
 ## 功能特点
 - 批量处理高光谱图像对（.hdr + .float）
@@ -118,7 +118,7 @@ pip install numpy matplotlib spectral scikit-learn scikit-image pandas
 ```
 
 ## 使用方法
-1. 准备高光谱图像数据（.hdr和.float文件对）并放置在data目录中
+1. 准备高光谱图像数据（.hdr和.float文件）并放置在data目录中
 2. 根据需要调整`Config`类中的配置参数（参见配置部分）
 3. 运行脚本：
 ```bash
@@ -171,7 +171,7 @@ python SOC710_HS_extract_batch.py
 9. **可视化**：生成并保存各种结果可视化
 
 ## 注意事项
-- 确保.hdr和.float文件形成有效的对，且具有相同的基名
+- 确保存在配套的有效的.hdr和.float文件，具有相同的文件名
 - 该工具在大多数情况下基本可行，但可能需要根据不同的图像条件调整参数
 - 处理时间取决于图像大小和文件数量；大型数据集可能需要更长时间
 - 为获得最佳结果，请根据特定的成像条件调整阈值和形态学参数
