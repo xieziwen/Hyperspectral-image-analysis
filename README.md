@@ -33,7 +33,9 @@ pip install numpy matplotlib spectral scikit-learn scikit-image pandas
 3. Run the script:
 ```bash
 python SOC710_HS_extract_batch_CHI.py
+```
 or
+```
 python SOC710_HS_extract_batch_ENG.py
 ```
 4. Check processing results in the specified result directory
@@ -125,7 +127,9 @@ pip install numpy matplotlib spectral scikit-learn scikit-image pandas
 3. 运行脚本：
 ```bash
 python SOC710_HS_extract_batch_CHI.py
+```
 或者
+```
 python SOC710_HS_extract_batch_ENG.py
 ```
 4. 在指定的结果目录中查看处理结果
